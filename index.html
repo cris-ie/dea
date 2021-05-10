@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>dea simulator</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="  https://unpkg.com/intro.js/minified/introjs.min.css" />
+    <script src= "https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+  <body>
+    <header id="main_head">
+      
+      <img class="logo" src="favicon.ico" alt="Loogoo" />
+      <h1>dea with reber grammer simulator</h1>
+    </header>
+    <div>
+      <form>
+        <fieldset id="inputHeader">
+          <legend>input</legend>
+          <label for="insertWord">insert word</label>
+          <input
+            id="insertWord"
+            type="text"
+            size="30"
+            placeholder="word you want to check"
+            onchange="onInputchanged(this.value)"
+          />
+          <button id="correctWord" type="button" onclick="onCorrect()">create correct reber word</button>
+
+          <button id="incorrectWord" type="button" onclick="onIncorrect()">create incorrect reber word</button>
+          <button id="testWord" type="button" onclick="onTest()">test word</button>
+
+        </fieldset>
+        <svg width="608px" id="graph" height="313px" style="background-color:rgb(255, 255, 255)" version="1.1" viewBox="-.5 -.5 608 313" xmlns="http://www.w3.org/2000/svg" >
+          <circle id="q0" cx="87" cy="156" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:87px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q0</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="87" y="160" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q0</text>
+           </switch>
+          </g>
+          <circle id= "q1" cx="187" cy="156" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:187px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q1</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="187" y="160" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q1</text>
+           </switch>
+          </g>
+          <circle id="q2" cx="287" cy="56" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:287px;padding-top:56px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q2</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="287" y="60" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q2</text>
+           </switch>
+          </g>
+          <circle id="q3" cx="287" cy="256" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:287px;padding-top:256px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q3</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="287" y="260" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q3</text>
+           </switch>
+          </g>
+          <circle id="q5" cx="387" cy="56" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:387px;padding-top:56px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q5</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="387" y="60" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q5</text>
+           </switch>
+          </g>
+          <circle id="q4" cx="387" cy="256" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:387px;padding-top:256px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q4</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="387" y="260" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q4</text>
+           </switch>
+          </g>
+          <circle id="q6" cx="487" cy="156" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:487px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q6</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="487" y="160" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q6</text>
+           </switch>
+          </g>
+          <circle id="q7" cx="587" cy="156" r="20" pointer-events="all" style="fill:#fad9d5;stroke:#d0cee2"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:587px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:12px;line-height:1.2;pointer-events:all;white-space:nowrap">q7</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="587" y="160" font-size="12px" style="fill:#1a1a1a;font-family:Helvetica;font-size:12px;text-anchor:middle">q7</text>
+           </switch>
+          </g>
+          <path d="m507 156h53.6" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m566 156-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:537px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">E</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="537" y="159" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">E</text>
+           </switch>
+          </g>
+          <path d="m401 70.1 67.2 67.2" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m472 141-7.43-2.48 3.72-1.23 1.23-3.72z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:442px;padding-top:107px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">S</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="442" y="110" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">S</text>
+           </switch>
+          </g>
+          <path d="m401 242 67.2-67.2" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m472 171-2.48 7.43-1.23-3.72-3.72-1.23z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:437px;padding-top:206px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">V</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="437" y="209" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">V</text>
+           </switch>
+          </g>
+          <path d="m307 256h53.6" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m366 256-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:337px;padding-top:256px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">V</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="337" y="259" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">V</text>
+           </switch>
+          </g>
+          <path d="m201 170 67.2 67.2" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m272 241-7.43-2.48 3.72-1.23 1.23-3.72z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:237px;padding-top:206px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">P</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="237" y="210" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">P</text>
+           </switch>
+          </g>
+          <path d="m201 142 62-80.8" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m266 56.9-1.48 7.68-1.72-3.52-3.84-0.74z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:234px;padding-top:99px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">T</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="234" y="102" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">T</text>
+           </switch>
+          </g>
+          <path d="m307 56h53.6" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m366 56-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:337px;padding-top:58px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">X</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="337" y="61" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">X</text>
+           </switch>
+          </g>
+          <path d="m107 156h53.6" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m166 156-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:137px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">B</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="137" y="159" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">B</text>
+           </switch>
+          </g>
+          <g stroke-miterlimit="10">
+           <path d="m7 156h53.6" pointer-events="stroke" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+           <path d="m65.9 156-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="all" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+           <path d="m373 70.1-69.3 166" pointer-events="stroke" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+           <path d="m302 241-0.53-7.81 2.56 2.96 3.9-0.26z" pointer-events="all" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          </g>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:337px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">X</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="337" y="159" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">X</text>
+           </switch>
+          </g>
+          <path d="m387 236v-154" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m387 77.1 3.5 7-3.5-1.75-3.5 1.75z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:387px;padding-top:156px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">P</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="387" y="159" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">P</text>
+           </switch>
+          </g>
+          <path d="m301 41.9q-14.1-55.9-26.7-6.18" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m273 40.8-1.67-7.64 2.96 2.55 3.82-0.83z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:287px;padding-top:6px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">S</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="287" y="10" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">S</text>
+           </switch>
+          </g>
+          <path d="m301 270q-14.1 55.9-26.7 6.18" pointer-events="stroke" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke:#09555b"/>
+          <path d="m273 271 5.11 5.92-3.82-0.83-2.96 2.55z" pointer-events="all" stroke-miterlimit="10" style="fill:#09555b;stroke-miterlimit:10;stroke:#09555b"/>
+          <g transform="translate(-.5 -.5)">
+           <switch>
+            <foreignObject width="100%" height="100%" pointer-events="none" style="overflow:visible;text-align:left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+             <div style="align-items:unsafe center;display:flex;height:1px;justify-content:unsafe center;margin-left:287px;padding-top:306px;width:1px">
+              <div style="box-sizing:border-box;font-size:0;text-align:center">
+               <div style="background-color:#ffffff;color:#1A1A1A;display:inline-block;font-family:Helvetica;font-size:11px;line-height:1.2;pointer-events:all;white-space:nowrap">T</div>
+              </div>
+             </div>
+            </foreignObject>
+            <text x="287" y="309" font-size="11px" style="fill:#1a1a1a;font-family:Helvetica;font-size:11px;text-anchor:middle">T</text>
+           </switch>
+          </g>
+         </svg>
+         <div id="controls">
+        <button id="play" type="button" onclick="onPlay()">play</button>
+        <button id="reset" type="button" onclick="onReset()">reset</button>
+        <button id="forward" type="button" onclick="onForward()">forward</button>
+        <button id="help" type="button" onclick="onHelp()">help</button>
+    
+        <label for="aRange">speed</label>
+        <input id="aRange" type="range" min="1" max="5" step="1" value="1" />
+      </div>
+      </form>
+    </div>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Q</th>
+          <th>Σ</th>
+          <th>*Q</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id= "r1">
+          <td>→q<sub>0</sub></td>
+          <td>B</td>
+          <td>q<sub>1</sub></td>
+        </tr>
+        <tr id= "r2">
+          <td>q<sub>1</sub></td>
+          <td>T</td>
+          <td>q<sub>2</sub></td>
+        </tr>
+        <tr id= "r3">
+          <td>q<sub>1</sub></td>
+          <td>P</td>
+          <td>q<sub>3</sub></td>
+        </tr>
+        <tr id= "r4">
+          <td>q<sub>2</sub></td>
+          <td>S</td>
+          <td>q<sub>2</sub></td>
+        </tr>
+        <tr id= "r5">
+          <td>q<sub>2</sub></td>
+          <td>X</td>
+          <td>q<sub>5</sub></td>
+        </tr>
+        <tr id= "r6">
+          <td>q<sub>3</sub></td>
+          <td>T</td>
+          <td>q<sub>3</sub></td>
+        </tr>
+        <tr id= "r7">
+          <td>q<sub>3</sub></td>
+          <td>V</td>
+          <td>q<sub>4</sub></td>
+        </tr>
+        <tr id= "r8">
+          <td>q<sub>4</sub></td>
+          <td>V</td>
+          <td>q<sub>6</sub></td>
+        </tr>
+        <tr id= "r9">
+          <td>q<sub>4</sub></td>
+          <td>P</td>
+          <td>q<sub>5</sub></td>
+        </tr>
+        <tr id= "r10">
+          <td>q<sub>5</sub></td>
+          <td>S</td>
+          <td>q<sub>6</sub></td>
+        </tr>
+        <tr id= "r11">
+          <td>q<sub>5</sub></td>
+          <td>X</td>
+          <td>q<sub>3</sub></td>
+        </tr>
+        <tr id= "r12">
+          <td>q<sub>6</sub></td>
+          <td>E</td>
+          <td>*q<sub>7</sub></td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="./script.js"></script>
+  </body>
+</html>
